@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const getPokemonData = async ({pokeId}) => {
+const getPokemon = async ({pokeId}) => {
   try {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeId}`);
     if (!res.ok) {
@@ -15,3 +15,22 @@ const getPokemonData = async ({pokeId}) => {
   }
 };
 
+
+const getRandomPokemon = async () => {
+  const randomNumber = Math.floor(Math.random() * 1025) + 1;
+  return getPokemon({pokeId: randomNumber});
+};
+
+const getRandomPokemons = async (amount) => {
+  let pokemonArray = [];
+  
+  while (pokemonArray.length < amount) {
+    const randomId = Math.floor(Math.random() * 1025) + 1;
+    const isDuplicateId = pokemonArray.find(({ id }) => id === randomId);
+    if (!isDuplicateId) {
+      pokemonArray.push({id: randomId});
+    }
+  }
+  
+  return await Promise.all(pokemonArray.map(({id}) => getPokemon({pokeId: id})));
+};
