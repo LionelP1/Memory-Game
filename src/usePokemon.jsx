@@ -15,12 +15,6 @@ const getPokemon = async ({pokeId}) => {
   }
 };
 
-
-const getRandomPokemon = async () => {
-  const randomNumber = Math.floor(Math.random() * 1025) + 1;
-  return getPokemon({pokeId: randomNumber});
-};
-
 const getRandomPokemons = async (amount) => {
   let pokemonArray = [];
   
