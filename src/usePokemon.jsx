@@ -25,6 +25,21 @@ const getRandomPokemons = async (amount) => {
       pokemonArray.push({id: randomId});
     }
   }
-  
   return await Promise.all(pokemonArray.map(({id}) => getPokemon({pokeId: id})));
+};
+
+// Fisher-Yates Shuffle
+const shuffleArray = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
+const createRandomPairs = async (amount) => {
+  const pokemonArray = await getRandomPokemons(amount);
+  let pokemonPairs = [...pokemonArray, ...pokemonArray];
+  const randomPairs = shuffleArray(pokemonPairs);
+  return randomPairs;
 };
