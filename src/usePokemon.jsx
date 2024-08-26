@@ -43,3 +43,5 @@ const createRandomPairs = async (amount) => {
   const randomPairs = shuffleArray(pokemonPairs);
   return randomPairs;
 };
+
+export default createRandomPairs;
