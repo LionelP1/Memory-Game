@@ -1,14 +1,14 @@
 import React from "react";
 import Card from "./Card";
 
-function GameBoard({ cards, onClick, cardsShowing, moves, misses, scoreGoal, score, onRestart }) {
+function GameBoard({ cards, onClick, cardState , moves, misses, scoreGoal, score, onRestart }) {
   return (
     <main>
-      <p className="game-info">
+      <div className="game-info">
         <div className="moves-info">Moves: {moves}</div>
         <div className="misses-info">Misses: {misses}</div>
         <div className="score-info">Score: {score}/{scoreGoal}</div>
-      </p>
+      </div>
 
       <div className="cards">
         {cards.map((card) => (
@@ -16,7 +16,7 @@ function GameBoard({ cards, onClick, cardsShowing, moves, misses, scoreGoal, sco
             card={card}
             key={card.id}
             onClick={onClick}
-            cardsShowing={cardsShowing}
+            cardState ={cardState}
           />
         ))}
       </div>

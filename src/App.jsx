@@ -1,26 +1,31 @@
-
-
-
 import React, { useEffect } from 'react';
 import usePokemon from './usePokemon.jsx';
+import GameBoard from './components/GameBoard.jsx';
 
 function App() {
   const { pokemons, createRandomPairs } = usePokemon();
 
   useEffect(() => {
-    createRandomPairs(5);
+    createRandomPairs(3);
   }, []);
+
 
 
   return (
     <div>
-      <h1>Random Pokémon</h1>
-      {pokemons.map((pokemon, index) => (
-        <div key={index}>
-          <img src={pokemon.image} alt={pokemon.name} />
-          <p>{pokemon.name}</p>
-        </div>
-      ))}
+      <div>
+        <h1>Gameboard Test</h1>
+        <GameBoard
+          cards={pokemons}
+          onClick={() => console.log('yes')}
+          cardState={'front'}
+          moves={5}
+          misses={5}
+          scoreGoal={5}
+          score={5}
+          onRestart={() => {}}
+        />
+      </div>
     </div>
   );
 }
