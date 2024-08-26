@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import Card from "./Card";
+import usePokemon from "../usePokemon";
+
+
 
 function GameBoard({ cards, onClick, cardState , moves, misses, scoreGoal, score, onRestart }) {
+  const { pokemons, createRandomPairs } = usePokemons();
+
+  useEffect(() => {
+    createRandomPairs(10);
+  }, [createRandomPairs]);
+  
+  
+  
+  
   return (
-    <main>
-      <div className="game-info">
-        <div className="moves-info">Moves: {moves}</div>
-        <div className="misses-info">Misses: {misses}</div>
-        <div className="score-info">Score: {score}/{scoreGoal}</div>
-      </div>
 
       <div className="cards">
         {cards.map((card) => (
