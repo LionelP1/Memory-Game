@@ -27,6 +27,13 @@ function MemoryGame() {
     }
   }, [pokemons]);
 
+  const handleRestart = () => {
+    setCards(prevCards => prevCards.map(card => ({ ...card, state: 'back' })));
+    setFlippedCards([]);
+    setMatchedCards([]);
+    setIsLocked(false);
+  };
+
   const handleCardClick = (id) => {
     if (isLocked) return;
 
@@ -76,10 +83,13 @@ function MemoryGame() {
   };
 
   return (
-    <GameBoard
-      cards={cards}
-      onCardClick={handleCardClick}
-    />
+    <div className="Game-Field">
+      <GameBoard
+        cards={cards}
+        onCardClick={handleCardClick}
+      />
+      <button className="restart-button" onClick={handleRestart}>Restart</button>
+    </div>
   );
 }
 
