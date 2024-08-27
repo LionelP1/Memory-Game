@@ -11,7 +11,7 @@ function MemoryGame() {
 
   // Create Pokemon pairs
   useEffect(() => {
-    createRandomPairs(2);
+    createRandomPairs(50);
   }, []);
 
   // Create cards array when pokemons are updated
@@ -55,16 +55,20 @@ function MemoryGame() {
 
     if (flippedCards.length === 1) {
       const firstCard = cards.find(card => card.id === flippedCards[0]);
-      if (firstCard.name === clickedCard.name) {
+      if (firstCard.name === clickedCard.name) { //Cards match
         setMatchedCards([...matchedCards, firstCard.id, clickedCard.id]);
         setFlippedCards([]);
+        const updatedCards = cards.map(card => 
+            card.id === id || card.id === firstCard.id ? { ...card, state: 'invisible' } : card
+        );
+        setCards(updatedCards);
       } 
-    //   else {
-    //     setTimeout(() => {
-    //       setCards(cards.map(card => flippedCards.includes(card.id) || card.id === id ? { ...card, state: 'back' } : card));
-    //       setFlippedCards([]);
-    //     }, 1000);
-    //   }
+    else {
+    setTimeout(() => {
+          setCards(cards.map(card => flippedCards.includes(card.id) || card.id === id ? { ...card, state: 'back' } : card));
+          setFlippedCards([]);
+        }, 1500);
+      }
     }
   };
 
