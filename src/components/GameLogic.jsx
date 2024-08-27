@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import usePokemon from '../usePokemon.jsx';
 import GameBoard from './GameBoard.jsx';
 import Scoreboard from './Scoreboard.jsx';
-import usePokemon from '../usePokemon.jsx';
+import Popup from './Popup.jsx';
+
 
 function MemoryGame() {
   const { pokemons, createRandomPairs } = usePokemon();
@@ -19,7 +21,7 @@ function MemoryGame() {
 
   // Create Pokemon pairs
   useEffect(() => {
-    createRandomPairs(3);
+    createRandomPairs(2);
   }, []);
 
   // Create cards array when pokemons are updated
@@ -42,6 +44,7 @@ function MemoryGame() {
     setMoves(0);
     setMisses(0);
     setScore(0);
+    setGameWon(false);
   };
 
   const handleCardClick = (id) => {
@@ -79,6 +82,11 @@ function MemoryGame() {
           setCards(updatedCards);
           setScore(score + 1);
           setIsLocked(false);
+
+          if (score + 1 === scoreGoal) {
+            setGameWon(true);
+          }
+
         }, 2000);
       } else {
         setTimeout(() => {
@@ -108,6 +116,17 @@ function MemoryGame() {
         onCardClick={handleCardClick}
       />
       <button className="reset-button" onClick={handleReset}>Reset</button>
+      
+      {gameWon && (
+        <Popup
+          message="You won the game!"
+          moves={moves}
+          misses={misses}
+          score={score}
+          onRestart={handleReset}
+          // onQuit={} ADD LATER
+        />
+      )}
     </div>
   );
 }
