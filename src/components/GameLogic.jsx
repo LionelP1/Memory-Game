@@ -7,6 +7,7 @@ function MemoryGame() {
   const [cards, setCards] = useState([]);
   const [flippedCards, setFlippedCards] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
+  const [isLocked, setIsLocked] = useState(false);
 
 
   // Create Pokemon pairs
@@ -27,6 +28,8 @@ function MemoryGame() {
   }, [pokemons]);
 
   const handleCardClick = (id) => {
+    if (isLocked) return;
+
     const clickedCard = cards.find(card => card.id === id);
 
     if (flippedCards.length === 2 || clickedCard.state !== 'back') {
@@ -40,6 +43,7 @@ function MemoryGame() {
     setFlippedCards([...flippedCards, id]);
 
     if (flippedCards.length === 1) {
+      setIsLocked(true);
       const firstCard = cards.find(card => card.id === flippedCards[0]);
 
       //If there is a match
@@ -53,6 +57,7 @@ function MemoryGame() {
             card.id === id || card.id === firstCard.id ? { ...card, state: 'invisible' } : card
           );
           setCards(updatedCards);
+          setIsLocked(false);
         }, 2000);
       } 
       else {
@@ -63,7 +68,9 @@ function MemoryGame() {
               : card
           ));
           setFlippedCards([]);
+          setIsLocked(false);
         }, 2000);
+
       }
     }
   };
