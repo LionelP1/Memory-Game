@@ -9,6 +9,7 @@ function MemoryGame() {
   const [flippedCards, setFlippedCards] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
   const [isLocked, setIsLocked] = useState(false);
+  const [gameWon, setGameWon] = useState(false);
 
   // Scoreboard states
   const [moves, setMoves] = useState(0);
@@ -33,7 +34,7 @@ function MemoryGame() {
     }
   }, [pokemons]);
 
-  const handleRestart = () => {
+  const handleReset = () => {
     setCards(prevCards => prevCards.map(card => ({ ...card, state: 'back' })));
     setFlippedCards([]);
     setMatchedCards([]);
@@ -106,7 +107,7 @@ function MemoryGame() {
         cards={cards}
         onCardClick={handleCardClick}
       />
-      <button className="restart-button" onClick={handleRestart}>Restart</button>
+      <button className="reset-button" onClick={handleReset}>Reset</button>
     </div>
   );
 }
