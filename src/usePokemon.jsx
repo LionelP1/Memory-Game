@@ -47,7 +47,6 @@ export default function usePokemons() {
     const randomPairs = shuffleArray(pokemonPairs);
     setPokemons(randomPairs);
   };
-  
   return { pokemons, getRandomPokemons, createRandomPairs, setPokemons };
 }
 
