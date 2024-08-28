@@ -17,9 +17,13 @@
     margin-right: auto; 
 }
 
+.scoreboard .logo:hover {
+    transform: scale(1.1);
+}
+
 .scoreboard .logo .title {
     font-family: Impact, Arial Black, Tahoma, Verdana;
-    font-size: 60px;
+    font-size: 75px;
     color: #F7D02C;
     margin: 0;
     padding: 0;
@@ -32,13 +36,13 @@
 }
 
 .scoreboard .logo .subheading {
-    font-size: 20px;
+    font-size: 23px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
     border: solid #034480 2px;
     border-radius: 5px;
     background-color: #C8102E;
-    width: 200px;
+    width: 220px;
     margin: 0;
     margin-bottom:30px;
     padding: 3px;
@@ -61,6 +65,7 @@
     border-radius: 5px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 1px;
+    user-select: none;
 }
 
 
