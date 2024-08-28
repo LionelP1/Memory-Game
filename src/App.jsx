@@ -12,7 +12,7 @@ function App() {
     <div>
       <div>
         <h1>Gameboard Test</h1>
-        {/* <MemoryGame cardMatches={2}/> */}
+        <MainGame></MainGame>
       </div>
     </div>
   );
