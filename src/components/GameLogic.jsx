@@ -47,6 +47,12 @@ function MemoryGame({cardMatches, onQuit}) {
     setGameWon(false);
   };
 
+  const handleRestart = () => {
+    createRandomPairs(cardMatches);
+    handleReset();
+  };
+
+
   const handleCardClick = (id) => {
     if (isLocked) return;
 
@@ -87,7 +93,7 @@ function MemoryGame({cardMatches, onQuit}) {
             setGameWon(true);
           }
 
-        }, 2000);
+        }, 1600);
       } else {
         setTimeout(() => {
           setCards(prevCards => prevCards.map(card =>
@@ -98,7 +104,7 @@ function MemoryGame({cardMatches, onQuit}) {
           setFlippedCards([]);
           setMisses(misses + 1);
           setIsLocked(false);
-        }, 2000);
+        }, 1600);
       }
     }
   };
@@ -123,7 +129,7 @@ function MemoryGame({cardMatches, onQuit}) {
           moves={moves}
           misses={misses}
           score={score}
-          onRestart={handleReset}
+          onRestart={handleRestart}
           onQuit={onQuit}
         />
       )}
