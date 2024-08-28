@@ -3,6 +3,7 @@ import usePokemon from '../usePokemon.jsx';
 import GameBoard from './GameBoard.jsx';
 import Scoreboard from './Scoreboard.jsx';
 import Popup from './Popup.jsx';
+import "../styles/GameLogic.css";
 
 
 function MemoryGame({cardMatches, onQuit}) {

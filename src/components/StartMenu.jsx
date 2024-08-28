@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles/StartMenu.css";
 
 export default function StartMenu({ onStartGame }) {
   const difficulties = [

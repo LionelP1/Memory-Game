@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/PopUp.css";
 
 export default function Popup({ message, moves, misses, score, onRestart, onQuit = () => {} }) {
   return (

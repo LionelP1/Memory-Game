@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles/Scoreboard.css";
 
 function Scoreboard({ moves, misses, score, scoreGoal }) {
   return (

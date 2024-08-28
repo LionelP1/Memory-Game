@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card.jsx';
+import "../styles/GameBoard.css";
 
 function GameBoard({ cards, onCardClick }) {
   return (

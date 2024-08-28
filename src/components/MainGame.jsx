@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MemoryGame from './GameLogic.jsx';
 import StartMenu from './StartMenu.jsx';
+import "../styles/MainGame.css";
 
 function MainGame() {
   const [gameStarted, setGameStarted] = useState(false);
