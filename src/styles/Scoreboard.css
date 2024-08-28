@@ -1,0 +1,81 @@
+.scoreboard {
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+}
+
+.scoreboard .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: auto; 
+}
+
+.scoreboard .logo .title {
+    font-family: Impact, Arial Black, Tahoma, Verdana;
+    font-size: 60px;
+    color: #F7D02C;
+    margin: 0;
+    padding: 0;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #034480;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.scoreboard .logo .subheading {
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    border: solid #034480 2px;
+    border-radius: 5px;
+    background-color: #C8102E;
+    width: 200px;
+    margin: 0;
+    margin-bottom:30px;
+    padding: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    user-select: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+}
+
+.scoreboard .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7D02C;
+    height: 40px;
+    margin: 10px 20px;
+    padding: 4px;
+    border: solid #034480 3px;
+    border-radius: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+}
+
+
+.moves-info,
+.misses-info,
+.score-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 27px;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 10px;
+    height: 30px;
+    font-weight: bold;
+}
