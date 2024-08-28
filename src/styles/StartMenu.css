@@ -10,22 +10,9 @@
     height: 100vh;
 }
 
-/* .start-menu .title {
-    font-family: Impact, Arial Black, Tahoma, Verdana;
-    font-size: 85px; 
-    color: #F7D02C;
-    margin: 0;
-    padding: 0;
-    -webkit-text-stroke-width: 6px;
-    -webkit-text-stroke-color: #034480;
-    letter-spacing: 3px;
-    font-weight: bolder;
-    text-transform: uppercase;
-} */
-
 .start-menu .title {
     font-family: Impact, Arial Black, Tahoma, Verdana;
-    font-size: 110px;
+    font-size: 130px;
     color: #F7D02C;
     margin: 0;
     padding: 0;
@@ -34,24 +21,25 @@
     letter-spacing: 3px;
     font-weight: bolder;
     text-transform: uppercase;
+    user-select: none;
 }
 
 
 
 .start-menu .subheading {
-    font-size: clamp(20px, 10vw, 30px); 
-    font-size:27px;
+    font-size:30px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-bottom: 20px;
     border: solid #034480 4px;
     border-radius: 5px;
     background-color: #C8102E;
-    width: 260px;
+    width: 330px;
     margin: 0;
     padding: 3px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     letter-spacing: 1px;
     margin-bottom:40px;
+    user-select: none;
 }
   
 .difficulty-buttons button {
@@ -62,6 +50,7 @@
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
+    user-select: none;
 }
   
 .difficulty-buttons button:hover {
