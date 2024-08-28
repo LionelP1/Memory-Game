@@ -18,7 +18,7 @@ function MainGame() {
   };
 
   return (
-    <div className="MainGame">
+    <div className="main-game">
       {gameStarted ? (
         <MemoryGame cardMatches={matches} onQuit={handleQuit} />
       ) : (
