@@ -5,7 +5,7 @@ import Scoreboard from './Scoreboard.jsx';
 import Popup from './Popup.jsx';
 
 
-function MemoryGame() {
+function MemoryGame({cardMatches, onQuit}) {
   const { pokemons, createRandomPairs } = usePokemon();
   const [cards, setCards] = useState([]);
   const [flippedCards, setFlippedCards] = useState([]);
@@ -21,8 +21,8 @@ function MemoryGame() {
 
   // Create Pokemon pairs
   useEffect(() => {
-    createRandomPairs(2);
-  }, []);
+    createRandomPairs(cardMatches);
+  }, [cardMatches]);
 
   // Create cards array when pokemons are updated
   useEffect(() => {
@@ -124,7 +124,7 @@ function MemoryGame() {
           misses={misses}
           score={score}
           onRestart={handleReset}
-          // onQuit={} ADD LATER
+          onQuit={onQuit}
         />
       )}
     </div>
