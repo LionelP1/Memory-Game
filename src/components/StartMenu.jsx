@@ -13,8 +13,8 @@ export default function StartMenu({ onStartGame }) {
 
   return (
     <div className="start-menu">
-      <h1>Pokemon Memory Game</h1>
-      <h2>Select Difficulty</h2>
+      <h1 className="title">Pokémon</h1>
+      <h2 className="subheading">CARD MATCH GAME</h2>
       <div className="difficulty-buttons">
         {difficulties.map((difficulty) => (
           <button
