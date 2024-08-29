@@ -117,6 +117,7 @@ function MemoryGame({cardMatches, onQuit}) {
         misses={misses} 
         score={score} 
         scoreGoal={scoreGoal} 
+        onQuit={onQuit}
       />
       <GameBoard
         cards={cards}

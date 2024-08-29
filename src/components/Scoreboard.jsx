@@ -1,10 +1,10 @@
 import React from 'react';
 import "../styles/Scoreboard.css";
 
-function Scoreboard({ moves, misses, score, scoreGoal }) {
+function Scoreboard({ moves, misses, score, scoreGoal, onQuit }) {
   return (
   <div className="scoreboard">
-    <div className="logo">
+    <div className="logo" onClick={onQuit}>
       <h1 className="title">Pokémon</h1>
       <h2 className="subheading">CARD MATCH GAME</h2>
     </div>
