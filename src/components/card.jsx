@@ -14,14 +14,12 @@ export default function Card({ id, card, onClick, cardState }) {
       {cardState === "front" && (
         <div className="card-front">
           <img
+            className="card-image"
             src={card.image}
             alt={card.name}
-            className="card-image"
             draggable="false"
           />
-          <p className="card-name">
-            <span className="name">{card.name}</span>
-          </p>
+          <span className="card-name">{card.name}</span>
         </div>
       )}
 
