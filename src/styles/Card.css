@@ -4,9 +4,6 @@
     align-items: center;
     width: 135px;
     height: 160px;
-    background-color: #F7D02C;
-    border-radius: 8px;
-    padding:5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     flex-direction: column;
     text-align: center;
@@ -14,16 +11,25 @@
   
 
 .card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width:inherit;
     height:inherit;
     background-size: cover;
-    background-color: rgb(65, 125, 208);
-    border: solid black 3px;
+    background-color: rgb(38, 84, 143);
+    border: solid #F7D02C 6px;
 }
+
+.card-back .back-img {
+    width: 70%;            
+    height: auto;          
+}
+  
   
 .card-front {
     background-color: blue;
-    border: solid black 3px;
+    border: solid #F7D02C 6px;
     width:inherit;
     height:inherit;
 }
@@ -36,3 +42,42 @@
 
 
 
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.logo .title {
+    font-family: Impact, Arial Black, Tahoma, Verdana;
+    font-size: 30px;
+    color: #F7D02C;
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #034480;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.logo .subheading {
+    font-size: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    border: solid #034480 1px;
+    border-radius: 5px;
+    background-color: #C8102E;
+    width: 90px;
+    margin: 0;
+    padding: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    user-select: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+}

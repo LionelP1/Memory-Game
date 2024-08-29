@@ -1,12 +1,13 @@
 import React from "react";
 import "../styles/Card.css";
+import pokeBallImg from '../assets/pokeball.png';
 
 export default function Card({ id, card, onClick, cardState }) {
   return (
     <div className="card" onClick={() => onClick(id)}>
       {cardState === "back" && (
         <div className="card-back">
-          fadsfdsa
+          <img className="back-img" src={pokeBallImg} alt="Pokeball"/>
         </div>
       )}
 
