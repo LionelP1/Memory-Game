@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import MemoryGame from './GameLogic.jsx';
 import StartMenu from './StartMenu.jsx';
 import "../styles/MainGame.css";
@@ -19,6 +19,7 @@ function MainGame() {
 
   return (
     <div className="main-game">
+      <div className="main-game-background"></div>
       {gameStarted ? (
         <MemoryGame cardMatches={matches} onQuit={handleQuit} />
       ) : (
@@ -29,3 +30,4 @@ function MainGame() {
 }
 
 export default MainGame;
+

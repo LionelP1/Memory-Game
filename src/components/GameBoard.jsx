@@ -4,7 +4,7 @@ import "../styles/GameBoard.css";
 
 function GameBoard({ cards, onCardClick }) {
   return (
-    <div className="memory-game-grid">
+    <div className="game-grid">
       {cards.map((card, index) => (
         <Card
           id={index}

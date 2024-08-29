@@ -1,0 +1,43 @@
+
+  
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: 160px;
+    background-color: #F7D02C;
+    border-radius: 8px;
+    padding:5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+
+.card-back {
+    width:inherit;
+    height:inherit;
+    background-size: cover;
+    background-color: rgb(65, 125, 208);
+    border: solid black 3px;
+}
+  
+.card-front {
+    background-color: blue;
+    border: solid black 3px;
+    width:inherit;
+    height:inherit;
+}
+
+  
+.card-name {
+    background-color: blue;
+    border: solid black 3px;
+
+}
+
+
+

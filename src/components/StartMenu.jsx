@@ -5,10 +5,8 @@ export default function StartMenu({ onStartGame }) {
   const difficulties = [
     { label: 'Easy', matches: 3 },
     { label: 'Medium', matches: 6 },
-    { label: 'Hard', matches: 10 },
-    { label: 'Advanced', matches: 15 },
-    { label: 'Extreme', matches: 20 },
-    { label: 'Impossible', matches: 30 },
+    { label: 'Hard', matches: 9 },
+    { label: 'Impossible', matches: 12 },
   ];
 
   return (
