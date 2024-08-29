@@ -111,7 +111,7 @@ function MemoryGame({cardMatches, onQuit}) {
   };
 
   return (
-    <div className="Game-Field">
+    <div className="game-field">
       <Scoreboard 
         moves={moves} 
         misses={misses} 

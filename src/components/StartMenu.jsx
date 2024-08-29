@@ -3,10 +3,11 @@ import "../styles/StartMenu.css";
 
 export default function StartMenu({ onStartGame }) {
   const difficulties = [
-    { label: 'Easy', matches: 3 },
-    { label: 'Medium', matches: 6 },
-    { label: 'Hard', matches: 9 },
-    { label: 'Impossible', matches: 12 },
+    { label: 'Easy', matches: 5 },
+    { label: 'Medium', matches: 10 },
+    { label: 'Hard', matches: 15 },
+    { label: 'Advance', matches: 20 },
+    { label: 'Impossible', matches: 30 },
   ];
 
   return (
