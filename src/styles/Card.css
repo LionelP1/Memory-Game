@@ -6,6 +6,7 @@
     height: 165px;
     flex-direction: column;
     text-align: center;
+    user-select: none;
 }
 
 .card:hover {
@@ -45,7 +46,7 @@
 }
 
 .card-front .card-name {
-    font-size: 23px;
+    font-size: 21px;
     font-family: 'Ariel', sans-serif;
     font-weight: bold;
     text-transform: capitalize;
