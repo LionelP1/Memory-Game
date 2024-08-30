@@ -22,7 +22,7 @@
 }
 
 .start-menu .subheading {
-    font-size:30px;
+    font-size: 30px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
     border: solid #034480 4px;
@@ -57,4 +57,26 @@
 .difficulty-buttons button:hover {
     background-color: #FBE87A;
     transform: scale(1.1);
+}
+
+
+@media (max-width: 520px) {
+    .start-menu .title {
+        font-size: 80px;
+        -webkit-text-stroke-width: 5px;
+    }
+
+    .start-menu .subheading {
+        font-size: 22px;
+        border: solid #034480 3px;
+        width: 230px;
+        margin-bottom:20px;
+    }
+
+    .difficulty-buttons button {
+        background-color: #F7D02C;
+        font-size: 20px;
+        padding: 5px 20px;
+
+    }
 }

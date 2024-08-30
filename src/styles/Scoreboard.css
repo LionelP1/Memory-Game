@@ -10,7 +10,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 15px;
+    padding-top: 15px;
     border-radius: 10px;
     color: white;
     font-family: 'Arial', sans-serif;
@@ -69,7 +69,6 @@
     justify-content: center;
     align-items: center;
     background-color: #F7D02C;
-    height: 40px;
     margin: 10px 20px;
     padding: 4px;
     border: solid #034480 3px;
@@ -83,14 +82,70 @@
 .misses-info,
 .score-info {
     display: flex;
-    flex-direction: column;
-    font-size: 27px;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    font-size: 27px;
     color: black;
     padding: 10px 15px;
     border-radius: 5px;
     margin: 0 10px;
-    height: 30px;
     font-weight: bold;
 }
+
+@media (max-width: 1000px) {
+    .scoreboard .info {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 750px) {
+    .scoreboard {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .scoreboard .info {
+        flex-direction: row;
+    }
+
+    .scoreboard .logo {
+        margin: 0 auto;
+    }
+
+    .moves-info,
+    .misses-info,
+    .score-info {
+        font-size: 18px;
+        padding: 3px 3px;
+        margin: 0 3px;
+
+    }
+
+    .scoreboard .title {
+        font-size: 70px;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: #034480;
+        letter-spacing: 1px;
+
+    }
+    
+    .scoreboard .subheading {
+        font-size: 20px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: white;
+        border: solid #034480 2px;
+        border-radius: 5px;
+        background-color: #C8102E;
+        width: 220px;
+        margin: 0;
+        padding: 3px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        letter-spacing: 1px;
+        user-select: none;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
+    }
+
+}
+
