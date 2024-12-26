@@ -4,7 +4,7 @@
 The Pokémon Memory Game is a fun and engaging card-matching game built with React. It challenges players to test their memory by flipping cards to find matching Pokémon pairs. Featuring randomized card arrangements and dynamic scoring, it provides a captivating gaming experience.
 
 ## Live Demo
-[Pokémon Memory Game Live Demo](https://pokemon-memory-game.netlify.app/)
+[Pokémon Memory Game Live Demo](https://memory-game-site-application.netlify.app/)
 
 ## Features
 - **Dynamic Pokémon Cards:** Fetches data from the PokéAPI to display a wide range of Pokémon.
